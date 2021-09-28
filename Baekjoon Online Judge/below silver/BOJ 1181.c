@@ -3,7 +3,7 @@
 
 void swap(int* a, int* b);
 
-int main() {//1181번 단어 정렬
+int main() {
 	// 1. 길이순으로 정렬 후
 	// 2. 동 길이 사전순으로 정렬
 	// [idx][len] : str
