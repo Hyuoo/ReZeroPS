@@ -1,5 +1,3 @@
-#https://www.acmicpc.net/problem/1157
-
 int main() {
     int c;
     int m=0,i=-1;
