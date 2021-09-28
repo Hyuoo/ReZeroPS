@@ -1,4 +1,4 @@
-int main() {
+int main(){
     int c;
     int m=0,i=-1;
     int a[26]={0,};
