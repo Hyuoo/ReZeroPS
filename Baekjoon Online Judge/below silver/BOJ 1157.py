@@ -1,6 +1,6 @@
-str=input().upper()
+st=input().upper()
 ar=[0]*26
-for c in str:
+for c in st:
     ar[ord(c)-ord('A')]+=1
 m = max(ar)
 idx=-1
