@@ -1,6 +1,6 @@
-#LEVEL3
-#코딩테스트 연습 > 위클리 챌린지 > 3주차 > 퍼즐 조각 채우기
-#https://programmers.co.kr/learn/courses/30/lessons/84021
+//LEVEL3
+//코딩테스트 연습 > 위클리 챌린지 > 3주차 > 퍼즐 조각 채우기
+//https://programmers.co.kr/learn/courses/30/lessons/84021
 
 #include <stdio.h>
 #include <stdlib.h>
