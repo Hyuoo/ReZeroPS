@@ -6,7 +6,7 @@ int main() {
 	int c;
 	scanf("%d", &n);
 	h = malloc(sizeof(unsigned int) * (n+1));
-	h[0] = 0xFFFFFFFF;
+	h[0] = 0xffffffff;
 	s = 0;
 	while(n--){
 		scanf("%d", &c);
