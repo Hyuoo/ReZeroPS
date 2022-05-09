@@ -19,3 +19,4 @@ def solution(orders, course):
         if(di):
             answer+=[key for key, val in di.items() if max(di.values())==val and max(di.values())>1]
     return sorted(["".join(a) for a in answer])
+#평균적으론 이놈이 더 실행시간이 빠르지만 헤비해질수록 기하급수로 실행시간이 올라감
