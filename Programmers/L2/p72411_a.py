@@ -4,6 +4,7 @@
 
 #combinations란 놈을 알았다
 import itertools
+
 def solution(orders, course):
     answer = []
     for c in course:
