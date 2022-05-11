@@ -1,6 +1,7 @@
 #코딩테스트 연습 > 이분탐색 > 입국심사
 #https://programmers.co.kr/learn/courses/30/lessons/43238
 
+#줄서는게 아니라 몇분동안 몇명을 처리할수 있는지 바꿔생각 ==> 이분탐색
 def solution(n, times):
     m = 0; M = max(times)*n
     answer = M
