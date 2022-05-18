@@ -4,15 +4,15 @@
 일단 백준이랑 프로그래머스 풀어놓은 코드 옮기기
 
 
----백준
+---백준(https://www.acmicpc.net/)
 파일명 : BOJ -----.ext
 TIER- 문제이름
 
----릿코드
+---릿코드(https://leetcode.com/)
 파일명 : Leet ---.ext
 문제이름
 
----프로그래머스
+---프로그래머스(https://programmers.co.kr/)
 파일명 : p-----.ext
 문제이름
 
