@@ -1,0 +1,1 @@
+p[101];n,m,i,j,c;int f(int*p,int a){if(p[a]==a){return a;}return p[a]=f(p,p[a]);}main(){scanf("%d\n%d",&n,&m);for(;i<=n;i++)p[i]=i;while(m--){scanf("%d%d",&i,&j);i=f(p,i);j=f(p,j);if(i<j)p[j]=i;else p[i]=j;}for(i=2;i<=n;i++)if(f(p,i)==1)c++;printf("%d",c);}
