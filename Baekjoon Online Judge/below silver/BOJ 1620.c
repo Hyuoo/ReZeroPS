@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+//Trie 구조 모르고 일단 한번 만들어봄
 typedef struct NODE {
 	int number;
 	char alpha;
