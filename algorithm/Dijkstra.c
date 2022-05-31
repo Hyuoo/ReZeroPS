@@ -41,7 +41,7 @@ while(1):
 */
 
 #define SIZE (1000)
-#define MAX_VALUE (9999)
+#define INF (9999)
 
 int* Dijkstra(int* graph, int start){
 	int now, next, min;
@@ -49,15 +49,15 @@ int* Dijkstra(int* graph, int start){
 	int *shortest = malloc(sizeof(int) * SIZE);
 	
 	for (i = 0; i < N; i++) {
-		shortest[i] = MAX_VALUE;
+		shortest[i] = graph[start][i];
 	}
 
 	for (now = start; ;now = next) {
 		visit[now] = true;
-		min = MAX_VALUE;
+		min = INF;
 		next = now;
 		for (j = 0; j < SIZE; j++) {
-			if (now == j || visit[j] || !ar[now][j]) continue;
+			if (now == j || visit[j] == true || ar[now][j] == INF) continue;
 			if (shortest[j] > shortest[now] + graph[now][j]) {
 				shortest[j] = shortest[now] + graph[now][j];
 			}
@@ -69,6 +69,5 @@ int* Dijkstra(int* graph, int start){
 		if (next == now)
 			break;
 	}
-	
 	return shortest;
 }
