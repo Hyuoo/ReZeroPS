@@ -1,8 +1,8 @@
 //내스타일 다익스트라
 /*
-#define SIZE (n)
+#define SIZE (n)	//아래선 매개변수로
+#define START (0)	//아래선 매개변수로
 #define INF (99999)
-#define START (0)
 그래프 배열 graph[SIZE][SIZE] 가 있을때 
 
 준비물:
