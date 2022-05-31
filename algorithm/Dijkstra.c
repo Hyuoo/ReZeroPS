@@ -42,21 +42,21 @@ while(1):
 
 #define INF (99999)
 
-int* Dijkstra(int* graph, int graphSize, int startIdx){
-	int now, next, min;
+int* Dijkstra(int** graph, int graphSize, int startIdx){
+	int now, next, min, i, j;
 	int *visit = calloc(sizeof(int), graphSize);
 	int *shortest = malloc(sizeof(int) * graphSize);
 	
 	for (i = 0; i < graphSize; i++) {
-		shortest[i] = graph[start][i];
+		shortest[i] = graph[startIdx][i];
 	}
 
 	for (now = startIdx; ;now = next) {
-		visit[now] = true;
+		visit[now] = 1;
 		min = INF;
 		next = now;
 		for (j = 0; j < graphSize; j++) {
-			if (now == j || visit[j] == true || ar[now][j] == INF) continue;
+			if (now == j || visit[j] == 1 || graph[now][j] == INF) continue;
 			if (shortest[j] > shortest[now] + graph[now][j]) {
 				shortest[j] = shortest[now] + graph[now][j];
 			}
@@ -68,5 +68,6 @@ int* Dijkstra(int* graph, int graphSize, int startIdx){
 		if (next == now)
 			break;
 	}
+	free(visit);
 	return shortest;
 }
