@@ -36,18 +36,20 @@ void asdf(const char* sample) {
 	node* root;
 	char* code;
 	char* originText;
+	int length;
+
+	length = strlen(sample);
+	root = getFrequency(sample);
+	code = huffmanEncoding(sample, root);
+	originText = huffmanDecoding(code, root, length);
 
 	printf("--------------------------\n");
 	printf("원래 문자열 : %s\n", sample);
-	printf("기존 텍스트 길이 : %d\n", strlen(sample));
-
-	root = getFrequency(sample);
-	code = huffmanEncoding(sample, root);
+	printf("기존 텍스트 길이 : %d\n", length);
 	printf("CODE : %s\n", code);
-
-	originText = huffmanDecoding(code, root);
 	printf("ORIGIN : %s\n", originText);
 	printf("--------------------------\n");
+
 	free(root);
 	free(code);
 	free(originText);
@@ -85,7 +87,7 @@ char* huffmanEncoding(const char* str, node* map) {
 	//for (int i = 0; i < 27; i++) {
 	//	printf("[%c : %d_%d]\n", i+'A', table[i][0],table[i][1]);
 	//}
-	char* encoded = malloc(sizeof(char)*2000);
+	char* encoded = malloc(sizeof(char)*3000);
 	int size = 0;
 	
 	char* ch;
@@ -103,10 +105,10 @@ char* huffmanEncoding(const char* str, node* map) {
 	return encoded;
 }
 
-char* huffmanDecoding(const char* str, node* map) {
+char* huffmanDecoding(const char* str, node* map, int length) {
 	node* tmp;
 	char* ch;
-	char* string = malloc(sizeof(char) * 100);
+	char* string = malloc(sizeof(char) * (length+1));
 	int size = 0;
 	
 	tmp = map;
@@ -137,6 +139,7 @@ char* getFrequency(const char* str) {
 	int size = 0;
 	char* ch;
 	ch = str;
+	node* root;
 
 	//table 초기화
 	for (int i = 0; i < 27; i++) {
@@ -205,5 +208,10 @@ char* getFrequency(const char* str) {
 	//	printf("%d : %c[%2d]\n", i, table[i]->val, table[i]->freq);
 	//}
 	//preOrder(heap[1]);
-	return heap[1];
+
+	root = heap[1];
+	free(table);
+	free(heap);
+
+	return root;
 }
