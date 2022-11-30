@@ -11,7 +11,7 @@ def solution(k, score):
             mj.append(sc)
         else:
             if sc>min(mj):
-                del mj[mj.index(min(mj))]
+                del mj[mj.index(min(mj))]   # mj.remove(min(mj))
                 mj.append(sc)
         answer.append(min(mj))
     return answer
