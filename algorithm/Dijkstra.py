@@ -14,15 +14,15 @@ def Dijkstra(maps:list, start:int, dest:int)->int:
   while(now != dest):
     visit[now] = True
     
-    for i in range(V):
-      if maps[now][i]!=0 and maps[now][i]!=INF:
-        if shortest[i] < shortest[now] + maps[now][i]:
-          shortest[i] = shortest[now] + maps[now][i]
+    for next_idx in range(V):
+      if (visit[next_idx]==False) and (now!=next_idx) and (maps[now][next_idx]!=INF):
+        if shortest[next_idx] < shortest[now] + maps[now][next_idx]:
+          shortest[next_idx] = shortest[now] + maps[now][next_idx]
     
     min_idx = 0
-    for i in range(1,V):
-      if visit[i]==False and shortest[min_idx] > shortest[i]:
-        min_idx = i
+    for idx in range(1,V):
+      if (visit[idx]==False) and (shortest[min_idx] > shortest[idx]):
+        min_idx = idx
     
     now = min_idx
   
