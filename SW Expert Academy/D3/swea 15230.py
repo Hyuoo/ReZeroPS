@@ -1,4 +1,7 @@
-
+'''
+매번처리보다 일괄처리가 빠름
+"".format() 보다 f"" 가 더 빠름
+'''
 
 T = int(input())
 S="abcdefghijklmnopqrstuvwxyz"
@@ -13,4 +16,4 @@ for tc in range(T):
             break
     ans.append(c)
 for i,a in enumerate(ans):
-    print("#{} {}".format(i+1, a))
+    print(f"#{i+1} {a}")
