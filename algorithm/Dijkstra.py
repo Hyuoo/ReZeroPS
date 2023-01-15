@@ -46,3 +46,11 @@ graph_input = '''
 ]
 '''
 #SOLUTION: 0->3->1->4->6 (3+1+2+4) 10
+
+class Graph:
+  def __init__(self,size):
+    pass
+  def vertex_half_connect(self,from,to,distance):
+    pass
+  def vertex_full_connect(self,from,to,distance):
+    pass
