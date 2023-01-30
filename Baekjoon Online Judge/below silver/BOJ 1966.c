@@ -1,4 +1,4 @@
-//py로 푼 코드 그대로 c
+// py -> c
 
 #include <stdio.h>
 #include <stdlib.h>
