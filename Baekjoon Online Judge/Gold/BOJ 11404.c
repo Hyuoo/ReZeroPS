@@ -1,4 +1,4 @@
-// py >> c
+// py -> c
 #include <stdio.h>
 #include <stdlib.h>
 #define INF (100000*100)
