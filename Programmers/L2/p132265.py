@@ -10,7 +10,7 @@
 아래와같이 두번 스캔해서 끝.
 딕셔너리만 쓰면 len()할때 또 시간들까봐 변수따로 씀.
 
-근데 이제보니까 꼭 갯수를 세지 않아도 되네
+근데 이제보니까 종류가 늘어날땐 꼭 갯수를 세지 않아도 되겠네
 '''
 from collections import defaultdict
 def solution(topping):
