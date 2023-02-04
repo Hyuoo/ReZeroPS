@@ -1,3 +1,4 @@
+//C로 푸는데 qsort, bsearch에서 2차원 포인터 이용하는데에 거의 두시간 걸렸다. 그래서 포인터없이 풀었다. 젠장
 #include <stdio.h>
 #include <string.h>
 
