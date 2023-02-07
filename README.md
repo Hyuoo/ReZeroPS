@@ -3,6 +3,9 @@
 
 일단 백준이랑 프로그래머스 풀어놓은 코드 옮기기
 
+참고용
+https://gall.dcinside.com/mgallery/board/view/?id=ps&no=27&page=1
+
 <23.01.12>
 푸는데 걸린 시간 기록
 
