@@ -15,6 +15,15 @@ k보다 작으면 임의 숫자를 늘려서 다시 탐색,
 k보다 크면 임의 숫자를 줄여서 다시 탐색.
 
 근데 공동순위가 있으면 큰값이 되기때문에 k가 되어도 임의숫자보다 낮은 숫자를 탐색하긴 해야한다.
+
+
+********** 기존 코드 이부분 겹치는것같아서 아래 코드로 수정해서 재채점.
+    if count>=k and ans>m:
+        ans = m
+    if count<k:
+        s=m+1
+    else:
+        e=m-1
 '''
 n = int(input())
 k = int(input())
@@ -26,10 +35,9 @@ while s<=e:
     count = 0
     for i in range(1,n+1):
         count += min(m//i,n)
-    if count>=k and ans>m:
+    if count>=k:
         ans = m
-    if count<k:
-        s=m+1
+        e = m-1
     else:
-        e=m-1
+        s = m+1
 print(ans)
