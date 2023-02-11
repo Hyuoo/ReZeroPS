@@ -9,6 +9,10 @@ https://gall.dcinside.com/mgallery/board/view/?id=ps&no=27&page=1
 <23.01.12>
 푸는데 걸린 시간 기록
 
+<23.02.12>
+주석으로 문제푼내용 정리하는거 위에서 아래로 옮김
+코드 라인 적는 문제때문에
+
 
 ---백준(https://www.acmicpc.net/)
 파일명 : BOJ 00000.ext
