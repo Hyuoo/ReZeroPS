@@ -1,36 +1,92 @@
-#인접그래프에서 다익스트라 A->B 최단거리만을 리턴하는 함수
+import heapq
+
+'''
+1. IN(Adjacency matrix, start) PROCESS(simple dijkstra) OUT(shortest list)
+  - Dijkstra_m_simple()
+2. IN(Adjacency matrix, start) PROCESS(priority dijkstra) OUT(shortest list)
+  - Dijkstra_m_priority()
+3. IN(Adjacency List, start) PROCESS(simple dijkstra) OUT(shortest list)
+  - Dijkstra_l_simple()
+4. IN(Adjacency List, start) PROCESS(priority dijkstra) OUT(shortest list)
+  - Dijkstra_l_priority()
+'''
 
 INF = 9999999
 
-#그래프와 시작점, 도착점 입력받아 그 최단거리만을 리턴.
-def Dijkstra(maps:list, start:int, dest:int)->int:
+#인접행렬의 그래프와 시작점 정수 입력받아 전체 최단거리 리스트를 리턴.
+def Dijkstra_m_simple(maps: list, start: int) -> list:
+    V = len(maps)
+    
+    visit = [0 for _ in range(V)]
+    shortest = [INF for _ in range(V)]
+    shortest[start] = 0
+    now_idx = start
+
+    while 1:
+        visit[now_idx] = True
+        for next_idx in range(V):
+            if now_idx==next_idx or visit[next_idx]==1 or maps[now_idx][next_idx]==INF:
+                continue
+            if shortest[next_idx] > shortest[now_idx] + maps[now_idx][next_idx]:
+                shortest[next_idx] = shortest[now_idx] + maps[now_idx][next_idx]
+
+        next_idx = now_idx
+        minv = 999999
+        for i in range(V):
+            if visit[i]==0 and minv>shortest[i]:
+                minv = shortest[i]
+                next_idx = i
+        if now_idx==next_idx:
+            break
+        now_idx = next_idx
+
+    return shortest
+
+#인접행렬 그래프와 시작점 정수 입력받아 전체 최단거리 리스트를 리턴.
+def Dijkstra_m_priority(maps:list, start:int)->list:
   V = len(maps)
   
-  visit = [False for _ in range(V)]
   shortest = [INF for _ in range(V)]
+  q = [[0, start]]
+  shortest[start] = 0
   
-  now = start
-  
-  while(now != dest):
-    visit[now] = True
-    
+  while q:
+    dist, now_idx = heapq.heappop(q)
+    if shortest[now_idx]<dist:
+      continue
     for next_idx in range(V):
-      if (visit[next_idx]==False) and (now!=next_idx) and (maps[now][next_idx]!=INF):
-        if shortest[next_idx] < shortest[now] + maps[now][next_idx]:
-          shortest[next_idx] = shortest[now] + maps[now][next_idx]
-    
-    min_idx = 0
-    for idx in range(1,V):
-      if (visit[idx]==False) and (shortest[min_idx] > shortest[idx]):
-        min_idx = idx
-    
-    now = min_idx
+      if next_idx==now_idx or maps[now_idx][next_idx]==INF:
+        continue
+      if shortest[next_idx]>shortest[now_idx]+maps[now_idx][next_idx]:
+        shortest[next_idx] = shortest[now_idx]+maps[now_idx][next_idx]
+        heapq.heappush(q, [dist, next_idx])
   
-  return shortest[dest]
+  return shortest
 
-
-
-
+#아직
+def Dijkstra_l_simple(maps:list):
+    n = len(maps)
+    visit = [0 for i in range(n)]
+    shortest = [INF for i in range(n)]
+    now = 0
+    shortest[0] = 0
+    visit[0] = 1
+    while 1:
+        visit[now] = 1
+        for next, dist in maps[now]:
+            if visit[next]:
+                continue
+            shortest[next] = min(shortest[next], shortest[now]+dist)
+        minv = INF
+        next = now
+        for i in range(n):
+            if visit[i]==0 and shortest[i]<minv:
+                minv = shortest[i]
+                next = i
+        if next==now:
+            break
+        now = next
+    return shortest
 
 
 #tmp graph
@@ -45,7 +101,19 @@ graph_input = '''
 [INF, INF, INF,   8,   4,   6,   0]
 ]
 '''
-#SOLUTION: 0->3->1->4->6 (3+1+2+4) 10
+#SHORTEST(0): [0, 4, 2, 3, 6, 6, 10]
+#SOLUTION(0,6): 0->3->1->4->6 (3+1+2+4) 10
+graph_link = '''0 1 5
+0 2 2
+0 3 3
+1 3 1
+1 4 2
+2 5 7
+3 5 3
+3 6 8
+4 6 4
+5 6 6
+'''
 
 class Graph:
   def __init__(self,size):
