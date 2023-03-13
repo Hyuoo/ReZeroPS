@@ -1,12 +1,11 @@
-class heap:
-    def __init__(self):
-        self.h = []
-        self.size = 0
 
-    def __init__(self, l:list):
+#minimum heap
+class heap:
+    def __init__(self, l:list = []):
         self.h = l
         self.size = len(l)
-        self.heapify()
+        if self.size>1:
+            self.heapify()
 
     def __str__(self):
         if self.isempty():
@@ -15,12 +14,12 @@ class heap:
 
     def push(self, x):
         self.h.append(x)
-        self.shiftdown(self.size)
         self.size += 1
+        self.shiftdown(self.size-1)
 
     def pop(self):
         if self.isempty():
-            return -1
+            return 0
         self.size -= 1
         retitem = self.h[0]
         self.h[0] = self.h[self.size]
@@ -63,9 +62,13 @@ class heap:
             break
         self.h[pos] = newitem
 
-
+'''
+오 백준 1927 (최소힙) 이걸로 푸니까 더빨라졌다
+'''
+        
 a = [random.randint(1,100) for i in range(10)]
 print(a)
 h = heap(a)
 while not h.isempty():
     print(h.pop())
+
