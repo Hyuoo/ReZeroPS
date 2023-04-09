@@ -57,9 +57,9 @@ def Dijkstra_m_priority(maps:list, start:int)->list:
     for next_idx in range(V):
       if next_idx==now_idx or maps[now_idx][next_idx]==INF:
         continue
-      if shortest[next_idx]>shortest[now_idx]+maps[now_idx][next_idx]:
+      if shortest[next_idx] > shortest[now_idx]+maps[now_idx][next_idx]:  #dist + maps[now_idx][next_idx]
         shortest[next_idx] = shortest[now_idx]+maps[now_idx][next_idx]
-        heapq.heappush(q, [dist, next_idx])
+        heapq.heappush(q, [shortest[next_idx], next_idx])
   
   return shortest
 
