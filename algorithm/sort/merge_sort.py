@@ -24,3 +24,11 @@ def merge_sort(arr:list, left:int, right:int)->None:
         j+=1
     for i in range(left,right):
         arr[i] = new[i-left]
+
+
+import random
+a = [random.randint(1,30000) for _ in range(10000)]
+b = a[:]
+a.sort()
+merge_sort(b,0,len(b))
+print(a==b)
