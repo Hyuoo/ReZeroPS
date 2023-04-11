@@ -114,9 +114,11 @@ correct = [
 	13,
 ]
 
-l = max(map(lambda x:len(x),expr))
-for expr_str,corr_ans in zip(expr,correct):
-	sc = stack_calc(expr_str)
-	print(sc.get_expr_infix_str(),"=>",
-		  sc.get_expr_postfix_str(),"=>",
-		  sc.get_result())
+if __name__ == "__main__":
+	l = max(map(lambda x:len(x),expr))
+	for expr_str, corr_ans in zip(expr, correct):
+		sc = stack_calc(expr_str)
+		print(sc.get_expr_infix_str(),"=>",
+			  sc.get_expr_postfix_str(),"=>",
+			  sc.get_result(),
+			  sc.get_result() == corr_ans)
