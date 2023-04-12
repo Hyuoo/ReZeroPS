@@ -16,17 +16,19 @@ class Stack:
 
     def push(self, data):
         if self.is_full():
-            return -1
+            raise IndexError("Stack is full")
         self.top += 1
         self.stack[self.top] = data
         return 0
 
     def pop(self):
         if self.is_empty():
-            return -1
-    ret = self.peek()
+            raise IndexError("Stack is empty")
+        ret = self.peek()
         self.top -= 1
         return ret
 
     def peek(self):
-        return -1 if self.is_empty() else self.stack[self.top]
+        if self.is_empty():
+            raise IndexError("Stack is empty")
+        return self.stack[self.top]
