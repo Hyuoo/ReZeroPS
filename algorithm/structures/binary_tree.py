@@ -72,7 +72,8 @@ class binary_tree:
                 return self.root.inorder()
             if sel==3:
                 return self.root.postorder()
-
+        else:
+            return []
 '''
 대충 이런 트리
             10
