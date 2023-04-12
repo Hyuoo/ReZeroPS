@@ -24,7 +24,7 @@ class Stack:
     def pop(self):
         if self.is_empty():
             raise IndexError("Stack is empty")
-        ret = self.peek()
+        ret = self.stack[self.top]
         self.top -= 1
         return ret
 
