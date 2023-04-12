@@ -2,6 +2,7 @@ class circular_queue:
 
     '''
     count를 따로 안만들면
+    여럿 head, rear 관계로 연산해야함.
     
     isempty:
         ret head == rear
