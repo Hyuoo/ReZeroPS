@@ -53,7 +53,7 @@ class DoubleLinkedList:
 
     def getAt(self, pos):
         if pos < 0 or pos > self.nodeCount:
-            return None
+            raise IndexError("list index out of range")
 
         if pos > self.nodeCount // 2:
             i = 0
@@ -92,7 +92,7 @@ class DoubleLinkedList:
 
     def insertAt(self, pos, newNode):
         if pos < 1 or pos > self.nodeCount + 1:
-            return False
+            raise IndexError("list index out of range")
 
         prev = self.getAt(pos - 1)
         return self.insertAfter(prev, newNode)
@@ -116,7 +116,7 @@ class DoubleLinkedList:
     ###imple###
     def popAt(self, pos):
         if pos < 1 or pos > self.nodeCount:
-            raise IndexError
+            raise IndexError("list index out of range")
 
         curr = self.getAt(pos - 1)
         return self.popAfter(curr)
