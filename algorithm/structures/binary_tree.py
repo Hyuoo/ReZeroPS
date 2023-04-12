@@ -72,8 +72,25 @@ class binary_tree:
                 return self.root.inorder()
             if sel==3:
                 return self.root.postorder()
+            if sel==4:
+                return self.level_traversal()
         else:
             return []
+
+    def level_traversal(self): #bfs
+        q = deque([self.root])
+        traversal = []
+
+        while q:
+            node = q.popleft()
+            traversal.append(node.data)
+            if node.left:
+                q.append(node.left)
+            if node.right:
+                q.append(node.right)
+
+        return traversal
+    
 '''
 대충 이런 트리
             10
@@ -91,6 +108,7 @@ depth = 5
  pre-order = [10, 20, 40, 100, 200, 300, 50, 1000, 2000, 30, 60]
   in-order = [200, 100, 300, 40, 20, 1000, 50, 2000, 10, 30, 60]
 post-order = [200, 300, 100, 40, 1000, 2000, 50, 20, 60, 30, 10]
+level-trav = [10, 20, 30, 40, 50, 60, 100, 1000, 2000, 200, 300]
 '''
 if __name__ == "__main__":
     r = Node(10)
