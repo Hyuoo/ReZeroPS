@@ -1,3 +1,15 @@
+'''
+circular_queue:
+- enqueue()
+- dequeue()
+- size()
+- isempty()
+- isfull()
+- front()
+- back()
+- getnext(n)
+'''
+
 class circular_queue:
 
     '''
