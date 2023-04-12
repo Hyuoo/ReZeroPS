@@ -1,3 +1,12 @@
+'''
+binary_tree:
+- size()
+- depth()
+- traversal(sel)
+    # 1:pre  2:in  3:post  4:level
+'''
+from collections import deque
+
 class Node:
     def __init__(self, data, left=None, right=None):
         self.data = data
@@ -47,7 +56,7 @@ class Node:
         traversal.append(self.data)
         return traversal
 
-      
+
 class binary_tree:
     def __init__(self, root=None):
         self.root = root
@@ -58,13 +67,14 @@ class binary_tree:
         else:
             return 0
 
+
     def depth(self):
         if self.root:
             return self.root.depth()+1
         else:
             return 0
 
-    def traversal(self, sel = 1):
+    def traversal(self, sel=1):
         if self.root:
             if sel==1:
                 return self.root.preorder()
