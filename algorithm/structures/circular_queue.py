@@ -1,7 +1,20 @@
 class circular_queue:
 
+    '''
+    count를 따로 안만들면
+    
+    isempty:
+        ret head == rear
+    isfull:
+        ret nextidx(rear) == head
+    size:
+        if head<rear:
+            ret rear - head
+        else:
+            ret maxsize + rear - head
+    '''
     def __init__(self, n=10):
-        self.maxcount = n
+        self.maxsize = n
         self.data = [0 for _ in range(n)]
         self.count = 0
         self.front = 0
@@ -28,27 +41,31 @@ class circular_queue:
         return self.count == 0
 
     def isfull(self):
-        return self.count == self.maxcount
+        return self.count == self.maxsize
 
     def enq(self, x):
         if self.isfull():
             raise IndexError("Queue is full")
-        self.data[self.rear] = x
         self.rear = self.getnext(self.rear)
+        self.data[self.rear] = x
         self.count += 1
 
     def deq(self):
         if self.isempty():
             raise IndexError("Queue is empty")
-        ret = self.data[self.front]
         self.front = self.getnext(self.front)
         self.count -= 1
-        return ret
-
-    def peek(self):
-        if self.isempty():
-            raise IndexError("Queue is empty")
         return self.data[self.front]
 
+    def front(self):
+        if self.isempty():
+            raise IndexError("Queue is empty")
+        return self.data[self.getnext(self.front)]
+    
+    def back(self):
+        if self.isempty():
+            raise IndexError("Queue is empty")
+        return self.data[self.rear]
+
     def getnext(self, n):
-        return (n+1)%self.maxcount
+        return (n+1)%self.maxsize
