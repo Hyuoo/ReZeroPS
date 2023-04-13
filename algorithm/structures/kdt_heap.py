@@ -9,10 +9,9 @@ class heap:
         pos = len(self.data)
         self.data.append(item)
         while pos>1:
-            parent = pos//2
-            if self.data[pos] > self.data[parent]:
-                self.data[pos], self.data[parent] = self.data[parent], self.data[pos]
-                pos = parent
+            if self.data[pos] > self.data[pos//2]:
+                self.data[pos], self.data[pos//2] = self.data[pos//2], self.data[pos]
+                pos>>=1
             else:
                 break
 
