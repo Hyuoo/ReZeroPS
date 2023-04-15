@@ -23,3 +23,7 @@ def solution(targets):
 새로운 폭격미사일을 만나면 이전 미사일 범위에서부터 줄여나간다.
 범위 밖 미사일이 나오면 새 요격미사일.
 '''
+'''
+https://school.programmers.co.kr/learn/courses/30/lessons/42884
+프로그래머스 L3 단속카메라 완전 동일문제.
+'''
