@@ -14,7 +14,7 @@ def solution(people, limit):
     return count
 '''
 구명보트
-@KDT_코테스터디
+#KDT_코테스터디
 풀이시간 : 10m
 
 무조건 무거운 사람부터 태워야 한다는 마인드.
