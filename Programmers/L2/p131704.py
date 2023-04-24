@@ -18,9 +18,8 @@ def solution(order):
     return count
 '''
 택배상자
+#KDT_코테스터디
 풀이시간 : 30m
-
-#KDT 코테스터디
 
 order대로 스택 이용해서 만들 수 있느냐 문제.
 
@@ -55,5 +54,4 @@ elif i>o and s and s[-1]==o:
     s.pop()
 else:
     break
-
 '''
