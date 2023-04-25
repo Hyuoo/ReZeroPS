@@ -14,7 +14,11 @@ print(*reversed(ans))
 
 #KDT_코테스터디
 에서 푼 [프로그래머스 - 뒤에 있는 큰 수 찾기]
+#https://school.programmers.co.kr/learn/courses/30/lessons/154539
 문제와 동일해서 동일코드로 품.
+
+응용 문제 [백준 - 오등큰수]
+#https://www.acmicpc.net/problem/17299
 
 뒤에서부터 읽으면서
 스택에는 내림차순으로 저장되어있고
