@@ -39,3 +39,29 @@ for i in range(len(ar)-1,-1,-1):
 ans.reverse()
 for i in ans:
     print(i, end=" ")
+
+'''
+23.04.25 KDT코테스터디에서 비슷한 문제 풀고나서
+좀 더 가독성높은 코드가 나와서 해당 코드로 다시 푼 코드
+왠지 위 코드보다 더 오래걸린다.
+    -> reversed 대신 그냥 range(i-1,-1,-1)해줘도 좀 빨라짐
+
+from collections import Counter
+N = int(input())
+ar = list(map(int,input().split()))
+ac = Counter(ar)
+st = []
+ans = []
+for i in reversed(range(len(ar))):
+    while st and ac[ar[i]]>=ac[st[-1]]:
+        st.pop()
+    ans.append(st[-1] if st and ac[ar[i]]<ac[st[-1]] else -1)
+    st.append(ar[i])
+print(*reversed(ans))
+
+더 쉬운문제 (Counter만 안씀)
+프로그래머스 - 뒤에 있는 큰 수 찾기
+# https://school.programmers.co.kr/learn/courses/30/lessons/154539
+백준 - 오큰수
+# https://www.acmicpc.net/problem/17298
+'''
