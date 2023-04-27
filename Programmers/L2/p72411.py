@@ -2,6 +2,7 @@
 #코딩테스트 연습 > 2021 KAKAO BLIND RECRUITMENT > 메뉴 리뉴얼
 #https://programmers.co.kr/learn/courses/30/lessons/72411
     #2트 한것보다 얘가 더 성능은 좋음 (빅오낮음)
+
 ''' 시간초과로 실패한 코드
 import itertools
 > itertools의 product를 사용하고, 전처리 하는데에 많은 시간 소요 예상 -> 대체함수 작성 product, rec
