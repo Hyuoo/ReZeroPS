@@ -19,6 +19,6 @@ def solution(record):
         elif(ar[0]=="Change"):
             user_list[uid] = ar[2]
             
-    for ent,uid in log:
+    for ent, uid in log:
         answer.append(ent(user_list[uid]))
     return answer
