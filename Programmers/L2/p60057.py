@@ -27,7 +27,6 @@ def solution(s):
         if ans>count:
             ans = count
     return ans
-
 '''
 문자열 압축
 풀이시간 : 약 30분?
