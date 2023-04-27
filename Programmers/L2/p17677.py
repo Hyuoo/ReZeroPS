@@ -2,6 +2,7 @@
 #https://programmers.co.kr/learn/courses/30/lessons/17677
 
 import re
+
 def solution(str1, str2):
     rr = re.compile("[A-Z]{2}")
     str1=str1.upper()
