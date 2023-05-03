@@ -1,0 +1,44 @@
+#https://school.programmers.co.kr/learn/courses/30/lessons/42583
+
+def solution(bridge, w, tr):
+    time = [bridge] * len(tr)
+    i=j=count=0
+    while j<len(tr):
+        skip_time = 1
+        if i<j:
+            if tr[j]>w:
+                skip_time = time[i]
+            for k in range(i,j):
+                time[k] -= skip_time
+        if time[i]==0:
+            w+=tr[i]
+            i+=1
+        if tr[j]<=w:
+            w-=tr[j]
+            j+=1
+        count += skip_time
+    return count+bridge
+'''
+다리를 지나는 트럭
+풀이시간 : 30분쯤?
+
+포인터 두개 써서 각각
+- 다리에서 다음에 나올 차 : i
+- 대기중인 다음에 들어올 차 : j
+가리키고
+시간은 다리 길이로 초기화해서 0이 되면 지나간것으로 간주
+무게는 그대로 써서 +-해서 계산
+
+while j가 남아 있으면:
+  1. 다리에 있는 모든 차 시간 감소
+    j 가 들어올 수 없으면
+    i 시간만큼 시간스킵
+  2. i가 나왔으면
+    잔여무게 증가, i++
+  3. j가 들어갈 수 있으면
+    잔여무게 감소, j++
+j가 더 없으므로
+경과시간 + 다리길이가 정답
+** 다리에있는 가장 마지막 차(=마지막에 들어가는 차)가 나가는 시간인데
+  어차피 다리 길이만큼 진행하므로 다리길이 더하면 정답
+'''
