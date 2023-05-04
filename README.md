@@ -1,6 +1,8 @@
 # ReZeroPS
 코딩은 처음이라 / Problem Solving
 
+<img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/pycharm-000000?style=flat&logo=pycharm&logoColor=white"/>
+
 일단 백준이랑 프로그래머스 풀어놓은 코드 옮기기
 
 참고용
