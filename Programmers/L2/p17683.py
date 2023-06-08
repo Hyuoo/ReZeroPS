@@ -14,32 +14,24 @@ https://school.programmers.co.kr/learn/courses/30/lessons/17683
 
 킹받네
 '''
-def conv_time(time):
-    h,m = time.split(":")
-    return int(m)+int(h)*60
-def conv_melody(m):
-    for a,b in (["A#","a"],["C#","c"],["D#","d"],["F#","f"],["G#","g"]):
-            m = m.replace(a,b)
-    return m
+def get_t(time):
+    h,m=map(int,time.split(":"))
+    return h*60+m
+
 def solution(m, musicinfos):
-    answer = ''
-    m = conv_melody(m)
-    #print(m, musicinfos)
-    musics = []
-    for seq, music in enumerate(musicinfos):
-        start, end, name, melody = music.split(",")
-       # end = conv_time(end)
-       # start = conv_time(start)
-       # if end<start:
-       #     end+=24*60
-        play = conv_time(end)-conv_time(start)
-        melody = conv_melody(melody)
-        if play>len(melody):
-            melody = melody*(play//len(melody)+1)
-        melody = melody[:play]
-        musics.append([-play,seq,melody,name])
-    musics.sort()
-    for music in musics:
-        if m in music[2]:
-            return music[3]
-    return "(None)"
+    repl = [["C#","c"],["D#","d"],["F#","f"],["G#","g"],["A#","a"]]
+    for old, new in repl:
+        m = m.replace(old, new)
+    find = []
+    for i, musicinfo in enumerate(musicinfos):
+        s,e,title,melody = musicinfo.split(",")
+        play=get_t(e)-get_t(s)
+        for old, new in repl:
+            melody = melody.replace(old, new)
+        melody = melody*(play//len(melody)+1)
+        if m in melody[:play]: # [:play] >> TC30
+            find.append([-play,i,title])
+    if find:
+        return sorted(find)[0][2]
+    else:
+        return "(None)"
