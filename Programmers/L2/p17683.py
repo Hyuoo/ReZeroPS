@@ -13,6 +13,8 @@ https://school.programmers.co.kr/learn/courses/30/lessons/17683
 문자열 "(None)"을 반환해야 하는게 답이었다.
 
 킹받네
+---
+23.06.08 KDT코테스터디 재풀이 코드변경
 '''
 def get_t(time):
     h,m=map(int,time.split(":"))
