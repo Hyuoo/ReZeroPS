@@ -6,14 +6,16 @@
 일단 백준이랑 프로그래머스 풀어놓은 코드 옮기기
 
 참고용
-https://gall.dcinside.com/mgallery/board/view/?id=ps&no=27&page=1
+- [DC PS갤러리](https://gall.dcinside.com/mgallery/board/view/?id=ps&no=27&page=1)
+- [이것이 취업을 위한 코딩 테스트다 with Python](https://github.com/ndb796/python-for-coding-test)
+- [코딩테스트 대비 문제집 with Baekjoon](https://github.com/tony9402/baekjoon)
 
-<23.01.12>
-푸는데 걸린 시간 기록
-
-<23.02.12>
-주석으로 문제푼내용 정리하는거 위에서 아래로 옮김
-코드 라인 적는 문제때문에
+> <23.01.12>
+> 푸는데 걸린 시간 기록
+> 
+> <23.02.12>
+> 주석으로 문제푼내용 정리하는거 위에서 아래로 옮김   
+> > 코드 라인 적는 문제때문에
 
 
 ---백준(https://www.acmicpc.net/)
