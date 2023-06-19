@@ -17,6 +17,10 @@
 > 주석으로 문제푼내용 정리하는거 위에서 아래로 옮김   
 > > 코드 라인 적는 문제때문에
 
+- 23.6월~ [KDT 코테스터디](https://github.com/Hyuoo/DE_Coding_Study)
+  - 문제업로드중복 ㅇ
+
+- - -
 
 ---백준(https://www.acmicpc.net/)
 파일명 : BOJ 00000.ext
