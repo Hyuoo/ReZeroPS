@@ -19,6 +19,7 @@ for h in range(s):
             pic[v][h] = "."
             pic[v+min_gap][h] = "X"
 print("".join(map(lambda x:"".join(x),pic)).rstrip())
+
 '''
 유성
 풀이시간 : 1시간넘게?
@@ -31,6 +32,8 @@ print("".join(map(lambda x:"".join(x),pic)).rstrip())
 아무리 생각해도 문제가 없는데 안풀려서 뭐가문제지 했다가
 문제 놓고 다시 와서 "."을 굳이 elif로 넣어야되나 해서 else로 옮겼더니
 통과함.
+> BEFORE: elif pic[v][h]==".": gap+=1
+> AFTER : else: gap+=1
 
 뭐지
 무조건 [X#.]세개중에 들어오는거면 문제없어야되는거 아닌가?
