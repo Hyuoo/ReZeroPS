@@ -21,7 +21,8 @@ def qsort(arr, s, e):
     swap(arr,key,r)
     qsort(arr,s, r-1)
     qsort(arr,r+1,e)
-    
-import random
-arr = [int(random.random()*100) for _ in range(10000)]
-qsort(arr,0,len(arr)-1)
+
+if __name__ == "__main__":
+    import random
+    arr = [int(random.random()*100) for _ in range(10000)]
+    qsort(arr,0,len(arr)-1)
