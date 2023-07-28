@@ -22,26 +22,16 @@
 
 - - -
 
-- 백준(https://www.acmicpc.net/)
-파일명 : BOJ 00000.ext
-TIER- 문제이름
+- [[ 백준 ]](https://www.acmicpc.net/)  `BOJ 00000.ext`
+- [[ 릿코드 ]](https://leetcode.com/)  `Leet 000.ext`
+- [[ 프로그래머스 ]](https://programmers.co.kr/)  `p00000.ext`
 
-- 릿코드(https://leetcode.com/)
-파일명 : Leet 000.ext
-문제이름
+```
+#코딩테스트 연습 > 위클리 챌린지 > 3주차 > 퍼즐 조각 채우기
+#https://programmers.co.kr/learn/courses/30/lessons/84021
+```
 
-- 프로그래머스(https://programmers.co.kr/)
-파일명 : p00000.ext
-문제이름
-
-첫줄주석
-//LEVEL3
-//코딩테스트 연습 > 위클리 챌린지 > 3주차 > 퍼즐 조각 채우기
-//https://programmers.co.kr/learn/courses/30/lessons/84021
-
-- SW Expert Academy(https://swexpertacademy.com/)
-파일명 : swea 0000.ext
-문제이름
+- [[ SW Expert Academy ]](https://swexpertacademy.com/)  `swea 0000.ext`
 
 - Algospot
 - 
