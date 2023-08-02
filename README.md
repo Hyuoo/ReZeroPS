@@ -17,7 +17,8 @@
 > 주석으로 문제푼내용 정리하는거 위에서 아래로 옮김   
 > > 코드 라인 적는 문제때문에
 
-- 23.6월~ [KDT 코테스터디](https://github.com/Hyuoo/DE_Coding_Study)
+- 23.04.19 ~ 23.07.11 [KDT 코테스터디](https://github.com/Hyuoo/DE_Coding_Study)
+  - 6월부터 프로그래머스 -> 백준 전환 (깃레포만듦)
   - 문제업로드중복 ㅇ
 
 - - -
