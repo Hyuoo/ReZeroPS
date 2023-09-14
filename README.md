@@ -90,3 +90,18 @@ level = f"{level}_{rating}"
 - 23.04.19 ~ 23.07.11 [KDT 코테스터디](https://github.com/Hyuoo/DE_Coding_Study)
   - 6월부터 프로그래머스 -> 백준 전환 (깃레포만듦)
   - 문제업로드중복 ㅇ
+  
+
+<23.09.14>
+- 기존 코드 디렉토리 변경
+- 커밋 메세지에 난이도/문제명 제거
+- 문제 코드 내 메타데이터 주석 추가
+  ```
+  Solving Date
+  Solving Time
+  Title
+  tags
+  url
+  runtime
+  memory
+  ```
