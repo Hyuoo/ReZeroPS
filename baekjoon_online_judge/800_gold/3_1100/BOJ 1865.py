@@ -58,6 +58,9 @@ for tc in range(int(input())):
 
 아니면 각 최단거리들이고
 
++ for (m+w) 보다
+    for (m) for (w) 가 더 빠르다.
+
 
 이후 추가적인 코멘트.
 INF, 시작점 0초기화 등은 안해도 정답.
