@@ -17,52 +17,16 @@
 
 ### [Baekjoon Online Judge](https://www.acmicpc.net/)
 
-`baekjoon_online_judge/tier/level/BOJ 00000.lang`
-```
-tier = f"{rating}_{tier_name}"   
-level = f"{level}_{rating}"
-```
-
-#### [티어표(나무위키)](https://namu.wiki/w/solved.ac#s-2.1)
-
-|       티어        | 필요 레이팅 |    이전 티어 대비 |     달성 인원 수 |     상위 % |
-|:---------------:|-------:|------------:|------------:|---------:|
-|     Unrated     |      0 |           0 |     114,798 |  100.00% |
-|    Bronze V     |     30 |         +30 |     100,058 |  100.00% |
-|    Bronze IV    |     60 |         +30 |      92,555 |   92.50% |
-|   Bronze III    |     90 |         +30 |      87,695 |   87.64% |
-|    Bronze II    |    120 |         +30 |      81,796 |   81.75% |
-|    Bronze I     |    150 |         +30 |      76,690 |   76.65% |
-|    Silver V     |    200 |         +50 |      69,376 |   69.34% |
-|    Silver IV    |    300 |        +100 |      58,088 |   58.05% |
-|   Silver III    |    400 |        +100 |      50,138 |   50.11% |
-|    Silver II    |    500 |        +100 |      43,897 |   43.87% |
-|    Silver I     |    650 |        +150 |      36,384 |   36.36% |
-|     Gold V      |    800 |        +150 |      30,375 |   30.36% |
-|     Gold IV     |    950 |        +150 |      24,667 |   24.65% |
-|    Gold III     |  1,100 |        +150 |      19,666 |   19.65% |
-|     Gold II     |  1,250 |        +150 |      14,685 |   14.68% |
-|     Gold I      |  1,400 |        +150 |      10,329 |   10.32% |
-|   Platinum V    |  1,600 |    **+200** |       5,766 |    5.76% |
-|   Platinum IV   |  1,750 |        +150 |       3,210 |    3.32% |
-|  Platinum III   |  1,900 |        +150 |       1,951 |    1.95% |
-|   Platinum II   |  2,000 |        +100 |       1,447 |    1.45% |
-|   Platinum I    |  2,100 |        +100 |       1,126 |    1.13% |
+[![Solved.ac프로필](http://mazassumnida.wtf/api/generate_badge?boj=hopeace6)](https://solved.ac/hopeace6)
 
 ### [LeetCode](https://leetcode.com/)
-`leetcode/difficulty/Leet 000.lang`
 
 
 ### [Programmers](https://programmers.co.kr/)
-`programmers/level/p00000.ext`
 
-```
-#코딩테스트 연습 > 위클리 챌린지 > 3주차 > 퍼즐 조각 채우기
-#https://programmers.co.kr/learn/courses/30/lessons/84021
-```
 
 ### [SW Expert Academy](https://swexpertacademy.com/)
-`sw_expert_academy/level/swea 0000.lang`
+
 
 ### Algospot
 
