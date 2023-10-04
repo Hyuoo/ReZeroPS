@@ -9,6 +9,7 @@ memory          : 31256 KB
 """
 
 rot = [[1,0],[-1,0],[0,1],[0,-1]]
+
 def scatter(i, j, k):
     if i==0 and j==c-1:
         return 0 if k else 1
