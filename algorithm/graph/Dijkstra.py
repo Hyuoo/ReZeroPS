@@ -14,7 +14,7 @@ import heapq
 INF = 9999999
 
 #인접행렬의 그래프와 시작점 정수 입력받아 전체 최단거리 리스트를 리턴.
-def Dijkstra_m_simple(maps: list, start: int) -> list:
+def Dijkstra_matrix_simple(maps: list, start: int) -> list:
     V = len(maps)
     
     visit = [0 for _ in range(V)]
@@ -43,15 +43,15 @@ def Dijkstra_m_simple(maps: list, start: int) -> list:
     return shortest
 
 #인접행렬 그래프와 시작점 정수 입력받아 전체 최단거리 리스트를 리턴.
-def Dijkstra_m_priority(maps:list, start:int)->list:
+def Dijkstra_matrix_priority(maps:list, start:int)->list:
   V = len(maps)
   
   shortest = [INF for _ in range(V)]
-  q = [[0, start]]
+  pq = [[0, start]]
   shortest[start] = 0
   
-  while q:
-    dist, now_idx = heapq.heappop(q)
+  while pq:
+    dist, now_idx = heapq.heappop(pq)
     if shortest[now_idx]<dist:
       continue
     for next_idx in range(V):
@@ -59,16 +59,16 @@ def Dijkstra_m_priority(maps:list, start:int)->list:
         continue
       if shortest[next_idx] > shortest[now_idx]+maps[now_idx][next_idx]:  #dist + maps[now_idx][next_idx]
         shortest[next_idx] = shortest[now_idx]+maps[now_idx][next_idx]
-        heapq.heappush(q, [shortest[next_idx], next_idx])
+        heapq.heappush(pq, [shortest[next_idx], next_idx])
   
   return shortest
 
 #아직
-def Dijkstra_l_simple(maps:list):
+def Dijkstra_list_simple(maps:list, start:int):
     n = len(maps)
     visit = [0 for i in range(n)]
     shortest = [INF for i in range(n)]
-    now = 0
+    now = start
     shortest[0] = 0
     visit[0] = 1
     while 1:
@@ -88,37 +88,39 @@ def Dijkstra_l_simple(maps:list):
         now = next
     return shortest
 
+def Dijkstra_list_priority(maps:list, start:int):
+    n = len(maps)
+    shortest = [INF for _ in range(n)]
+    # 최소거리 갱신을 for문 안에서 할 경우 필요
+    shortest[start] = 0
+    pq = [[0, start]]
 
-#tmp graph
-graph_input = '''
-[
-[  0,   5,   2,   3, INF, INF, INF],
-[  5,   0, INF,   1,   2, INF, INF],
-[  2, INF,   0, INF, INF,   7, INF],
-[  3,   1, INF,   0, INF,   3,   8],
-[INF,   2, INF, INF,   0, INF,   4],
-[INF, INF,   7,   3, INF,   0,   6],
-[INF, INF, INF,   8,   4,   6,   0]
-]
-'''
-#SHORTEST(0): [0, 4, 2, 3, 6, 6, 10]
-#SOLUTION(0,6): 0->3->1->4->6 (3+1+2+4) 10
-graph_link = '''0 1 5
-0 2 2
-0 3 3
-1 3 1
-1 4 2
-2 5 7
-3 5 3
-3 6 8
-4 6 4
-5 6 6
-'''
+    while pq:
+        now_dist, now_idx = heapq.heappop(pq)
+        # 여기서 한번 잡아줘야 훨씬 빨라지고
+        if shortest[now_idx] < now_dist:
+            continue
+        # 방문 처리를 여기서 할 경우엔
+        # 위에 shortest[start] = 0이 필요 없음.
+        # shortest[now_idx] = now_dist
 
-class Graph:
-  def __init__(self,size):
-    pass
-  def vertex_half_connect(self,from,to,distance):
-    pass
-  def vertex_full_connect(self,from,to,distance):
-    pass
+        for nxt, nxt_dist in maps[now_idx]:
+            total = shortest[now_idx] + nxt_dist
+            if shortest[nxt] > total:
+                # 방문 처리 타이밍 차이
+                # 여기서 하는게 더 빠른 듯.
+                shortest[nxt] = total
+                heapq.heappush(pq, [total, nxt])
+
+    return shortest
+
+
+
+
+
+if __name__ == "__main__":
+    import Graph
+    g = Graph.get_graph_list()
+
+    print(Dijkstra_list_priority(g, 0))
+    print(Dijkstra_list_simple(g, 0))
