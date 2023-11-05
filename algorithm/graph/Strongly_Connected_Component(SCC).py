@@ -48,7 +48,7 @@ def dfs(x):
             p = min(p, roots[nxt])
 
     # Q: 그냥 p==x 해도 되는거 아냐?
-    # A: 노드 번호랑 부여한 id랑 일치하지 않음.
+    # A: 노드 번호랑 부여한 id랑 일치하지 않음. 위 id부여 이유 참고
     if p == roots[x]:
         scc_tmp = []
         # SCC 별로 그룹 만들어서 리스트에 저장.
