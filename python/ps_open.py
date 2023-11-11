@@ -17,6 +17,9 @@ a = open(0).read()
 #
 a = open(0).readline()
 
+# '\n'단위로 언패킹. lines
+*open(0)
+
 # '\n'단위로 언패킹. '\n'를 포함한 리스트로 변환 -> lines
 [*open(0)]
 
