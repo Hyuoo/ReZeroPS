@@ -60,5 +60,5 @@ for i in range(len(ar)-1):
 
 ### 관련 문제
 
-- [S3 | 구간 합 구하기 4](https://www.acmicpc.net/problem/11659) [[풀이 코드](/baekjoon_online_judge/200_silver/3_400/BOJ%2011659.py)]
-- [G4 | 낚시](https://www.acmicpc.net/problem/30461) [[풀이 코드](/baekjoon_online_judge/800_gold/4_950/BOJ%2030461.py)]
+- [[S3] 구간 합 구하기 4](https://www.acmicpc.net/problem/11659) [[풀이 코드](/PS/baekjoon_online_judge/200_silver/3_400/BOJ%2011659.py)]
+- [[G4] 낚시](https://www.acmicpc.net/problem/30461) [[풀이 코드](/PS/baekjoon_online_judge/800_gold/4_950/BOJ%2030461.py)]

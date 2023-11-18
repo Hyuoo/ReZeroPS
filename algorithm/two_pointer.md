@@ -31,6 +31,6 @@ ex) `i, j`, `left, right`, `start, end`
 
 ### 관련 문제
 
-- [S4 | 수들의 합 2](https://www.acmicpc.net/problem/2003) [[풀이 코드](/baekjoon_online_judge/200_silver/4_300/BOJ%202003.py)]
-- [S3 | 두 수의 합](https://www.acmicpc.net/problem/3273)
-- [G5 | 두 용액](https://www.acmicpc.net/problem/2470)
+- [[S4] 수들의 합 2](https://www.acmicpc.net/problem/2003) [[풀이 코드](/PS/baekjoon_online_judge/200_silver/4_300/BOJ%202003.py)]
+- [[S3] 두 수의 합](https://www.acmicpc.net/problem/3273)
+- [[G5] 두 용액](https://www.acmicpc.net/problem/2470)
