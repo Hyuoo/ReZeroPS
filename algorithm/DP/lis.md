@@ -127,5 +127,5 @@ lis배열의 길이를 하나 늘리게 된다.
 
 ### 관련 문제
 
-- [[G5] 전깃줄](https://www.acmicpc.net/problem/2565) [[풀이 코드](/PS/baekjoon_online_judge/800_gold/5_800/BOJ%202565.py)]
-- [[G2] 반도체 설계](https://acmicpc.net/problem/2352) [[풀이 코드](PS/baekjoon_online_judge/800_gold/2_1250/BOJ%202352.py)]
+- [[G5] 전깃줄](https://www.acmicpc.net/problem/2565) [[풀이 코드](/PS/baekjoon_online_judge/gold/5/BOJ%202565.py)]
+- [[G2] 반도체 설계](https://acmicpc.net/problem/2352) [[풀이 코드](PS/baekjoon_online_judge/gold/2/BOJ%202352.py)]
