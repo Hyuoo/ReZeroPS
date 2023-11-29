@@ -4,13 +4,14 @@ Solving Time    : 36m
 Title           : 학생회 뽑기
 tags            : 그리디 알고리즘, 비트마스킹
 url             : https://www.acmicpc.net/problem/30015
-runtime         : 452 ms
+runtime         : 436 ms
 memory          : 54036 KB
 """
 
 n, k = map(int, input().split())
 a = [*map(int, input().split())]
 bit = 1<<19
+ans = 0
 
 while bit:
     b = []
@@ -18,12 +19,10 @@ while bit:
         if i&bit:
             b.append(i)
     if len(b)>=k:
+        ans |= bit
         a = b
     bit>>=1
 
-ans = -1
-for i in a:
-    ans &= i
 print(ans)
 
 """
