@@ -1,6 +1,6 @@
 # ReZeroPS
 
-#### 코딩은 처음이라 / Problem Solving
+#### Study [ Problem Solving / Algorithm / SQL / Python ]
 
 <img src="https://img.shields.io/badge/github-181717?style=flat&logo=github&logoColor=white"/> <img src="https://img.shields.io/badge/python-3776AB?style=flat&logo=python&logoColor=white"/> <img src="https://img.shields.io/badge/pycharm-000000?style=flat&logo=pycharm&logoColor=white"/>
 
@@ -10,6 +10,8 @@
 - [DC PS갤러리](https://gall.dcinside.com/mgallery/board/view/?id=ps&no=27&page=1)
 - [이것이 취업을 위한 코딩 테스트다 with Python](https://github.com/ndb796/python-for-coding-test)
 - [코딩테스트 대비 문제집 with Baekjoon](https://github.com/tony9402/baekjoon)
+- https://www.techiedelight.com/ko/
+    - 베이직한 알고리즘과 이름있는 다양한 알고리즘에 대한 이론, 코드
 
 ***
 
