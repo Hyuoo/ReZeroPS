@@ -129,3 +129,8 @@ lis배열의 길이를 하나 늘리게 된다.
 
 - [[G5] 전깃줄](https://www.acmicpc.net/problem/2565) [[풀이 코드](/PS/baekjoon_online_judge/gold/5/BOJ%202565.py)]
 - [[G2] 반도체 설계](https://acmicpc.net/problem/2352) [[풀이 코드](PS/baekjoon_online_judge/gold/2/BOJ%202352.py)]
+- [[S2] 가장 큰 증가하는 부분 수열](https://www.acmicpc.net/problem/11055) [[풀이코드](/PS/baekjoon_online_judge/silver/2/BOJ%2011055.py)]
+- [[G4] 가장 긴 바이토닉 수열](https://www.acmicpc.net/problem/11054) [[풀이 코드](PS/baekjoon_online_judge/gold/4/BOJ%2011054.py)]
+
+
+- [백준문제집 - LIS연습](https://www.acmicpc.net/workbook/view/1911)
