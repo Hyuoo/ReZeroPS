@@ -1,0 +1,67 @@
+"""
+Solving Date    :
+Solving Time    :
+Title           :
+tags            :
+url             :
+runtime         :  ms
+memory          :  KB
+"""
+
+# 숏코딩은
+"""
+Solving Date    :
+Title           :
+tags            :
+url             :
+rank            :
+byte            :  B
+"""
+
+# SQL
+/*
+Solving Date    :
+Title           :
+tags            :
+url             :
+*/
+
+################
+# <타입> : <제목> 의 형식으로 제목을 아래 공백줄에 작성
+# 제목은 50자 이내 / 변경사항이 "무엇"인지 명확히 작성 / 끝에 마침표 금지
+# 예) feat : 로그인 기능 추가
+
+# 바로 아래 공백은 지우지 마세요 (제목과 본문의 분리를 위함)
+
+################
+# 본문(구체적인 내용)을 아랫줄에 작성
+# 여러 줄의 메시지를 작성할 땐 "-"로 구분 (한 줄은 72자 이내)
+
+################
+# feat : 새로운 기능 추가
+# fix : 버그 수정
+# docs : 문서 수정
+# test : 테스트 코드 추가
+# refact : 코드 리팩토링
+# edit :
+################
+# 대회문제는 앞에 [contest] 추가
+# solve: 맞았습니다
+# unsolved: 못 품
+# resolve: 옛날에 풀었던거 다시 푼경우
+# othersolve: 즉시 다른 풀이
+# cheat: 좀 많이 참고,,
+# short: 숏코딩
+### CATEGORY ###
+# implement, math, string, sort, simulation
+# data_structure
+# LIS, LCS, palindrome, parsing
+# tree, graph, dfs, bfs, priority_queue, backtracking
+# MST
+# binary_search
+# prefix_sum, two_pointer, sliding_window, bitmask
+# greedy, DP, brute_force
+# dijkstra, floyd_warshall
+# DAG, topology_sort, SCC
+
+# constructive
