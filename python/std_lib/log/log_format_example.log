@@ -1,0 +1,28 @@
+[2024-02-15 13:01:51,465][INFO: File H_TB_TVPRGM.py, line 160 in <module>] process date: [2023-12-20]
+[2024-02-15 13:02:00,647][INFO: File H_TB_TVPRGM.py, line 178 in <module>] 2369 row(s) inserted. 0 failed. so far
+[2024-02-15 13:02:00,648][INFO: File H_TB_TVPRGM.py, line 160 in <module>] process date: [2023-12-19]
+[2024-02-15 13:02:10,275][INFO: File H_TB_TVPRGM.py, line 178 in <module>] 2411 row(s) inserted. 0 failed. so far
+[2024-02-15 13:02:10,277][INFO: File H_TB_TVPRGM.py, line 160 in <module>] process date: [2023-12-18]
+[2024-02-15 13:02:21,456][INFO: File H_TB_TVPRGM.py, line 178 in <module>] 2459 row(s) inserted. 0 failed. so far
+[2024-02-15 13:02:21,459][INFO: File H_TB_TVPRGM.py, line 188 in <module>] end running at 2024-02-15 13:02:21.459765
+[2024-02-15 13:02:21,461][INFO: File H_TB_TVPRGM.py, line 189 in <module>] running time : 439.1 seconds
+
+[2024-02-16 09:40:05,023][INFO: File H_TB_OTHBCACT.py, line 146 in <module>] start running at 2024-02-16 09:40:05.023308
+[2024-02-16 09:40:05,743][INFO: File H_TB_OTHBCACT.py, line 162 in <module>] request date: [2024-01-17 ~ 2024-02-16]
+[2024-02-16 09:40:06,842][INFO: File H_TB_OTHBCACT.py, line 99 in parsing_html_text] 
+          검색 결과 값이 없습니다.
+        
+[2024-02-16 09:40:06,848][INFO: File H_TB_OTHBCACT.py, line 183 in <module>] 0 row(s) inserted. 0 failed. so far
+[2024-02-16 09:40:06,848][INFO: File H_TB_OTHBCACT.py, line 162 in <module>] request date: [2023-12-17 ~ 2024-01-16]
+[2024-02-16 09:40:08,297][INFO: File H_TB_OTHBCACT.py, line 129 in load_db] [ * ] already insert ==> break
+[2024-02-16 09:40:08,298][INFO: File H_TB_OTHBCACT.py, line 178 in <module>] at last date: ('최고인민회의 제14기 제10차회의 참석 및 연설', '20240116', '김덕훈,최룡해,리병철', 'https://nkinfo.unikorea.go.kr/nkp/kje/view.do', '20240216')
+[2024-02-16 09:40:08,304][INFO: File H_TB_OTHBCACT.py, line 183 in <module>] 0 row(s) inserted. 0 failed. so far
+[2024-02-16 09:40:08,321][INFO: File H_TB_OTHBCACT.py, line 194 in <module>] end running at 2024-02-16 09:40:08.321632
+[2024-02-16 09:40:08,322][INFO: File H_TB_OTHBCACT.py, line 195 in <module>] running time : 3.2986 seconds
+
+[2024-02-16 10:23:05,445][INFO: File H_TB_RCRIT.py, line 219 in <module>] 1214 row(s) inserted. 0 failed. so far
+[2024-02-16 10:23:06,700][INFO: File H_TB_RCRIT.py, line 195 in <module>] process.. pageindex=104
+[2024-02-16 10:23:06,720][INFO: File H_TB_RCRIT.py, line 196 in <module>] at first url in [/13]: https://unikorea.go.kr/unikorea/notify/recruit/?boardId=bbs_0000000000000121&mode=view&searchCondition=all&searchKeyword=&cntId=15858&category=&pageIdx=104
+[2024-02-16 10:23:29,043][INFO: File H_TB_RCRIT.py, line 216 in <module>] end of pagination.
+[2024-02-16 10:23:29,046][INFO: File H_TB_RCRIT.py, line 227 in <module>] end running at 2024-02-16 10:23:29.046867
+[2024-02-16 10:23:29,047][INFO: File H_TB_RCRIT.py, line 228 in <module>] running time : 2007.4 seconds

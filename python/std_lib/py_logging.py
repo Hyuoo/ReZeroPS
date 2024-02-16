@@ -4,8 +4,23 @@ import logging
 from datetime import datetime
 
 
+LOG_FORMAT = '[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s in %(funcName)s] %(message)s'
+
+# # 함수 안써
+# logging.basicConfig(
+#     level=logging.INFO,
+#     format=LOG_FORMAT,
+#     stream=sys.stdout
+# )
+# logger = logging.getLogger(__name__)
+# logger.info(msg)
+# logger.debug(msg)
+# logger.error(msg)
+
+
+# 함수 써
 def create_logger():
-    logger = logging.getLogger()
+    logger = logging.getLogger(__name__)
     # log level
     #   NOTSET  : 0
     #   DEBUG   : 10
@@ -20,7 +35,7 @@ def create_logger():
         os.makedirs(log_dir)
 
     formatter = logging.Formatter(
-        '[%(asctime)s][%(levelname)s| %(filename)s-%(funcName)s:%(lineno)s] >> %(message)s'
+        '[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s in %(funcName)s] %(message)s'
         '\n'
         '\t%(process)s, %(processName)s / %(thread)s, %(threadName)s / [%(my_param)-10s][%(my_my)+10s]'
     )
