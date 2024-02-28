@@ -8,11 +8,18 @@ LOG_FORMAT = '[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s 
 
 # # 함수 안써
 # logging.basicConfig(
+#     # stdout으로 스트림 출력
 #     level=logging.INFO,
 #     format=LOG_FORMAT,
 #     stream=sys.stdout
 # )
 # logger = logging.getLogger(__name__)
+# 
+# 추가로 다른 파일로 로그를 출력하려면 파일 핸들러 사용
+# file_handler = logging.FileHandler(".log", encoding='utf-8')
+# file_handler.setFormatter(logging.Formatter('[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s in %(funcName)s] %(message)s'))
+# logger.addHandler(file_handler)
+
 # logger.info(msg)
 # logger.debug(msg)
 # logger.error(msg)
