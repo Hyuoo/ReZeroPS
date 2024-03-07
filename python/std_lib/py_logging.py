@@ -2,32 +2,30 @@ import sys
 import os
 import logging
 from datetime import datetime
+import time
 
 
 LOG_FORMAT = '[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s in %(funcName)s] %(message)s'
 
-# # 함수 안써
-# logging.basicConfig(
-#     # stdout으로 스트림 출력
-#     level=logging.INFO,
-#     format=LOG_FORMAT,
-#     stream=sys.stdout
-# )
-# logger = logging.getLogger(__name__)
-# 
-# 추가로 다른 파일로 로그를 출력하려면 파일 핸들러 사용
-# file_handler = logging.FileHandler(".log", encoding='utf-8')
-# file_handler.setFormatter(logging.Formatter('[%(asctime)s][%(levelname)s: File "%(filename)s", line %(lineno)s in %(funcName)s] %(message)s'))
-# logger.addHandler(file_handler)
+# 함수 안써
+logging.basicConfig(
+    # stdout으로 스트림 출력
+    level=logging.INFO,
+    format=LOG_FORMAT,
+    # stream=sys.stdout
+)
+global_logger = logging.getLogger(__name__)
 
-# logger.info(msg)
-# logger.debug(msg)
-# logger.error(msg)
+# 추가로 다른 파일로 로그를 출력하려면 파일 핸들러 사용
+file_handler = logging.FileHandler(os.getcwd()+"/.log", encoding='utf-8')
+file_handler.setFormatter(logging.Formatter(LOG_FORMAT))
+
+global_logger.addHandler(file_handler)
 
 
 # 함수 써
-def create_logger():
-    logger = logging.getLogger(__name__)
+def create_logger(name):
+    logger = logging.getLogger(name)
     # log level
     #   NOTSET  : 0
     #   DEBUG   : 10
@@ -46,6 +44,12 @@ def create_logger():
         '\n'
         '\t%(process)s, %(processName)s / %(thread)s, %(threadName)s / [%(my_param)-10s][%(my_my)+10s]'
     )
+    """ example
+    [2024-03-07 17:07:29,464][INFO: File "py_logging.py", line 81 in logger_test] in fo m
+	120660, MainProcess / 140104093372864, MainThread / [hello     ][       NNn]
+    [2024-03-07 17:07:33,537][CRITICAL: File "py_logging.py", line 87 in logger_test] fafa
+	120660, MainProcess / 140104093372864, MainThread / [hello     ][       NNn]
+    """
 
     stream_handler = logging.StreamHandler()
     stream_handler.setFormatter(formatter)
@@ -59,10 +63,9 @@ def create_logger():
     return logger
 
 
-if __name__ == "__main__":
-    print(sys.argv)
-    logger = create_logger()
-    print(logger)
+def logger_test():
+    logger = create_logger("local_logger")
+    print(f"local_logger: {logger}")
     d = {"my_param": "hello", "my_my": "NNn"}
 
     while 1:
@@ -82,3 +85,15 @@ if __name__ == "__main__":
             logger.critical(msg, extra=d)
 
     logger.info("프로그램 종료임", extra=d)
+
+
+if __name__ == "__main__":
+    print(f"global_logeer: {global_logger}")
+    start_time = time.time()
+    global_logger.info(f"start running at {str(datetime.now())}")
+
+    logger_test()
+
+    end_time = time.time()
+    global_logger.info(f"end running at {str(datetime.now())}")
+    global_logger.info(f"running time : {end_time-start_time:.05} seconds\n")

@@ -1,0 +1,8 @@
+[2024-03-07 17:21:38,365][INFO: File "py_logging.py", line 80 in logger_test] in fo
+	126706, MainProcess / 140178399039936, MainThread / [hello     ][       NNn]
+[2024-03-07 17:21:41,393][WARNING: File "py_logging.py", line 82 in logger_test] 3 3 3 3
+	126706, MainProcess / 140178399039936, MainThread / [hello     ][       NNn]
+[2024-03-07 17:21:44,480][CRITICAL: File "py_logging.py", line 86 in logger_test] crit!
+	126706, MainProcess / 140178399039936, MainThread / [hello     ][       NNn]
+[2024-03-07 17:21:45,786][INFO: File "py_logging.py", line 88 in logger_test] 프로그램 종료임
+	126706, MainProcess / 140178399039936, MainThread / [hello     ][       NNn]
