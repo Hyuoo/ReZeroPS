@@ -16,6 +16,7 @@ print("\n속도 >>", sum(tt)/len(tt))
 #print("표준편차 : {}\tM : {}\tm : {}".format(round(numpy.std(tt),6),round(max(tt),6),round(min(tt),6)))
 '''
 
+from datetime import datetime
 import time
 
 def runtime(func):
@@ -23,7 +24,7 @@ def runtime(func):
         start = time.time()
         func()
         end = time.time()
-        print(f"{func.__name__}() runtime: {end-start}seconds")
+        print(f"{func.__name__}() running time: {end-start} seconds")
     return deco
 
 def loop_test(func):
@@ -36,7 +37,7 @@ def loop_test(func):
                 func()
         print()
         end = time.time()
-        print(f"{LOOP_COUNT*10} loops, {func.__name__}() runtime: {end-start}seconds")
+        print(f"{LOOP_COUNT*10} loops, {func.__name__}() running time: {end-start} seconds")
 
     return deco
 
