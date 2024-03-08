@@ -17,17 +17,22 @@ print("\n속도 >>", sum(tt)/len(tt))
 '''
 
 from datetime import datetime
-import time
 
 def runtime(func):
+    import time
+
     def deco():
         start = time.time()
-        func()
+        ret = func()
         end = time.time()
         print(f"{func.__name__}() running time: {end-start} seconds")
+        return ret
+    
     return deco
 
 def loop_test(func):
+    import time
+
     LOOP_COUNT = 100000
     def deco():
         start = time.time()
