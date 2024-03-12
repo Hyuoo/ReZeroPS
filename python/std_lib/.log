@@ -1,0 +1,4 @@
+[2024-03-07 17:21:27,683][INFO: File "py_logging.py", line 94 in <module>] start running at 2024-03-07 17:21:27.683678
+[2024-03-07 17:21:45,787][INFO: File "py_logging.py", line 99 in <module>] end running at 2024-03-07 17:21:45.787172
+[2024-03-07 17:21:45,787][INFO: File "py_logging.py", line 100 in <module>] running time : 18.103 seconds
+
