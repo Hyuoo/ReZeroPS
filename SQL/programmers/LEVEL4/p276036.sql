@@ -1,7 +1,7 @@
 /*
 Solving Date    : 2024.02.23
 Title           : 언어별 개발자 분류하기
-tags            : GROUP BY
+tags            : GROUP BY, BIT MASK
 url             : https://school.programmers.co.kr/learn/courses/30/lessons/276036
 */
 
