@@ -17,7 +17,7 @@ import copy
 from typing import *
 import sys
 # input = sys.stdin.readline
-# input = lambda:sys.stdin.readline.rstrip()
+# input = lambda:sys.stdin.readline().rstrip()
 # sys.setrecursionlimit(10**9)
 sys.stdin = open("input.txt", 'r')
 from tools import timecheck
