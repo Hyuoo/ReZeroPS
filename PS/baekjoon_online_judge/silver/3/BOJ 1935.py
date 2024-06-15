@@ -27,5 +27,5 @@ for op in postfix_exp:
 print(f"{float(s[0]):.2f}")
 
 """
-
+eval꼼수.
 """
