@@ -52,15 +52,17 @@ url             :
 # othersolve: 즉시 다른 풀이
 # cheat: 좀 많이 참고,,
 # short: 숏코딩
+
 ### CATEGORY ###
 # implement, math, string, sort, simulation
 # data_structure
 # LIS, LCS, palindrome, parsing
-# tree, graph, dfs, bfs, priority_queue, backtracking
-# MST
-# binary_search
 # prefix_sum, two_pointer, sliding_window, bitmask
-# greedy, DP, brute_force
+# 
+# greedy, DP, brute_force, binary_search
+# 
+# tree, graph, binary_tree, MST, BST
+# dfs, bfs, priority_queue, backtracking
 # dijkstra, floyd_warshall
 # DAG, topology_sort, SCC
 
