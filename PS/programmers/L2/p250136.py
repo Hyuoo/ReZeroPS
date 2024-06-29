@@ -2,7 +2,7 @@
 Solving Date    : 2024.04.08
 Solving Time    : 15m
 Title           : [PCCP 기출문제] 2번 / 석유 시추
-tags            : prefix_sum
+tags            : prefix_sum, dfs, bfs
 url             : https://school.programmers.co.kr/learn/courses/30/lessons/250136
 runtime         : -
 memory          : -
