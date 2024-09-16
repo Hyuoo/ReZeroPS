@@ -54,7 +54,7 @@ url             :
 # short: 숏코딩
 
 ### CATEGORY ###
-# implement, math, string, sort, simulation
+# implement, math, string, sort, simulation, recursion
 # data_structure
 # LIS, LCS, palindrome, parsing
 # prefix_sum, two_pointer, sliding_window, bitmask
